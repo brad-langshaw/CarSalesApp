@@ -1,0 +1,89 @@
+﻿@model CarSalesApp1.User
+@{
+    ViewData["Title"] = "Store";
+
+
+    List<CarSalesApp1.Merchandise>
+    merchandiseList = new List<CarSalesApp1.Merchandise>
+        ();
+
+    if (IsPost)
+    {
+        string make = Request.Form["make"];
+        using (var localDatabaseCopy = new CarSalesApp1.StoreDBEntities())
+        {
+            if (make == "")
+            {
+                var query = from m in localDatabaseCopy.Merchandises
+                            select m;
+                foreach (var merchandise in query)
+                {
+                    merchandiseList.Add(merchandise);
+                }
+            }
+            else
+            {
+                var query = from m in localDatabaseCopy.Merchandises
+                            where m.make == make
+                            select m;
+                foreach (var merchandise in query)
+                {
+                    merchandiseList.Add(merchandise);
+                }
+            }
+        }
+    }
+    else
+    {
+        using (var localDatabaseCopy = new CarSalesApp1.StoreDBEntities())
+        {
+
+            var query = from m in localDatabaseCopy.Merchandises
+                        select m;
+            foreach (var merchandise in query)
+            {
+                merchandiseList.Add(merchandise);
+            }
+        }
+    }
+}
+
+
+@section mainDiv {
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Home", "Home")</li> &rsaquo;
+    <li>@Html.ActionLink("Store", "Store", "Home")</li>
+</ol>
+    <div class="container justify-content-center">
+        <hr />
+        <form method="post" asp-controller="Home" asp-action="Store">
+            <fieldset>
+                <div>
+                    <label>Search by Category</label><br />
+                    <input type="text" name="make" value="" />
+                    <input type="submit" value="submit" class="submit" />
+
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="container">
+
+            @foreach (var merchandise in merchandiseList)
+            {<div class="row"><h2>@merchandise.make</h2></div>
+            <div class="row">
+                <div class="col-4">
+                    <img width="350" src="/Images/@merchandise.imageURL" />
+                </div>
+                <div class="col-8">
+                    <h3>@merchandise.style</h3>
+                    <h3>$@merchandise.price</h3>
+                    <h4>@merchandise.engine</h4>
+                    <p>@merchandise.description</p>
+                </div>
+            </div>
+        }
+        </div>
+
+    </div>
+}

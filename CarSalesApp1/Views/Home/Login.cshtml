@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+
+@section mainDiv {
+    <form method="post">
+        <fieldset>
+            <legend> Login Form </legend>
+            <div>
+                <label>User Name</label><br />
+                <input type="text" name="username" value=@Request.Form["username"] />
+                @Html.ValidationMessage("username")
+            </div>
+            <div>
+                <label>Password</label><br />
+                <input type="password" name="password" value=@Request.Form["password"] />
+                @Html.ValidationMessage("password")
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="Login" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+}

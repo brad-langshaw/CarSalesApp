@@ -1,0 +1,44 @@
+﻿@model CarSalesApp1.User
+@{
+    ViewData["Title"] = "Sign Up";
+
+}
+
+
+@section mainDiv {
+
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @*<form method="post" asp-controller="Home" asp-action="Store">*@
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend> Sign Up Form </legend>
+            <div>
+                <label>User Name</label><br />
+                @*<input type="text" name="username" value=@Request.Form["username"] />*@
+                @Html.EditorFor(model => model.username)
+                @Html.ValidationMessageFor(model => model.username)
+            </div>
+            <div>
+                <label>Name</label><br />
+                @Html.EditorFor(model => model.name)
+                @Html.ValidationMessageFor(model => model.name)
+            </div>
+            <div>
+                <label>Last Name</label><br />
+                @Html.EditorFor(model => model.lastName)
+                @Html.ValidationMessageFor(model => model.lastName)
+            </div>
+            <div>
+                <label>Password</label><br />
+                @Html.EditorFor(model => model.password)
+                @Html.ValidationMessageFor(model => model.password)
+            </div>
+            <div>
+                <input type="submit" value="submit" class="submit" />
+            </div>
+        </fieldset>
+        @*</form>*@
+    }
+}

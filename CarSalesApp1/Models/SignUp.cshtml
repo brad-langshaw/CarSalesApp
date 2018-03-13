@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+    Page.Title = "Sign Up";
+
+}
+
+@{
+    Validation.RequireField("username", "username required");
+    Validation.RequireField("name", "name required");
+    Validation.RequireField("lastname", "last name required");
+    Validation.RequireField("password", "password required");
+    Validation.Add("password", Validator.StringLength(12,8,"Password should be between 8 and 32 characters long"));
+    // Validator.Regex()
+    if (IsPost)
+    {
+
+        if (Validation.IsValid())
+        {
+
+            string username, name, lastName, password;
+            username = Request.Form["username"];
+            name = Request.Form["name"];
+            lastName = Request.Form["lastname"];
+            password = Request.Form["password"];
+            Model.User user = new Model.User(username, name, lastName, password);
+            using (var db = new Model.StoreDBEntities())
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+        }
+        }
+}
+}
+
+@section mainDiv {
+    <form method="post" action="~/View/Store">
+        <fieldset>
+            <legend> Sign Up Form </legend>
+            <div>
+                <label>User Name</label><br />
+                <input type="text" name="username" value=@Request.Form["username"] />
+                @Html.ValidationMessage("username")
+            </div>
+            <div>
+                <label>Name</label><br />
+                <input type="text" name="name" value=@Request.Form["name"] />
+                @Html.ValidationMessage("name")
+            </div>
+            <div>
+                <label>Last Name</label><br />
+                <input type="text" name="lastname" value=@Request.Form["lastname"] />
+                @Html.ValidationMessage("lastname")
+            </div>
+            <div>
+                <label>Password</label><br />
+                <input type="password" name="password" value="" />
+                @Html.ValidationMessage("password")
+            </div>
+            <div>
+                <input type="submit" value="submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+}

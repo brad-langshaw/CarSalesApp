@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="~/Content/app.css" type="text/css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-toggleable-md navbar-dark bg-primary align-items-lg-start col-sm-12">
+        <a class="navbar-brand col-xs-12 col-sm-12 col-md-8" href="#">
+            <img id="NavCar" src="~/MS_Transparent_Background.png" />
+            <h1>Cloud Cars</h1>
+        </a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="float-right col-md-2">
+            <ul class="navbar-nav">
+                <li class="nav-item noMobile">
+                    @Html.ActionLink("Sign Up", "SignUp", "Home", new { @class = "signup-link nav-link" })
+                </li>
+                <li class="nav-item noMobile">
+                    @Html.ActionLink("Login", "Login", "Home", new { @class = "login-link nav-link" })
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse position-relative justify-content-end" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", new { @class = "home-link nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Store", "Store", "Home", new { @class = "store-link nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Add", "Merchandise", "Home", new { @class = "merchandise-link nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", "Home", new { @class = "about-link nav-link" })
+                </li>
+                <li class="nav-item Mobile">
+                    @Html.ActionLink("Sign Up", "SignUp", "Home", new { @class = "signup-link nav-link" })
+                </li>
+                <li class="nav-item Mobile">
+                    @Html.ActionLink("Login", "Login", "Home", new { @class = "login-link nav-link" }))
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    @RenderBody()
+    <div class="mainDiv container">
+        @RenderSection("mainDiv", true)
+    </div>
+    <footer><p> Copyright Brad Langshaw</p>   </footer>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="~/Scripts/main.js"></script>
+</body>
+</html>
+
+
+
+

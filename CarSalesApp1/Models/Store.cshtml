@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "Merchandise";
+
+
+    List<Model.Merchandise>
+    merchandiseList = new List<Model.Merchandise>
+        ();
+
+    if (IsPost)
+    {
+        string make = Request.Form["make"];
+        using (var localDatabaseCopy = new Model.StoreDBEntities())
+        {
+            if (make == "")
+            {
+                var query = from m in localDatabaseCopy.Merchandises
+                            select m;
+                foreach (var merchandise in query)
+                {
+                    merchandiseList.Add(merchandise);
+                }
+            } else
+            {
+                var query = from m in localDatabaseCopy.Merchandises
+                            where m.make == make
+                            select m;
+                foreach (var merchandise in query)
+                {
+                    merchandiseList.Add(merchandise);
+                }
+            }
+        }
+    }
+    else
+    {
+        using (var localDatabaseCopy = new Model.StoreDBEntities())
+        {
+
+            var query = from m in localDatabaseCopy.Merchandises
+                        select m;
+            foreach (var merchandise in query)
+            {
+                merchandiseList.Add(merchandise);
+            }
+        }
+    }
+   }
+
+
+        @section mainDiv {
+            <div class="container justify-content-center">
+                <hr />
+                <form method="post">
+                    <fieldset>
+                        <div>
+                            <label>Search by Category</label><br />
+                            <input type="text" name="make" value="" />
+                            <input type="submit" value="submit" class="submit" />
+
+                        </div>
+                    </fieldset>
+                </form>
+
+                <div class="container">
+
+                    @foreach (var merchandise in merchandiseList)
+                    {<div class="row"><h2>@merchandise.make</h2></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img width="350" src="@merchandise.imageURL" />
+                        </div>
+                        <div class="col-8">
+                            <h3>@merchandise.style</h3>
+                            <h3>@merchandise.price</h3>
+                            <h3>@merchandise.engine</h3>
+                            <h3>@merchandise.description</h3>
+                        </div>
+                    </div>
+                }
+                </div>
+
+            </div>
+        }

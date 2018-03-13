@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarSalesApp1StoreContainer" CdmEntityContainer="StoreDBEntities">
+    <EntitySetMapping Name="Merchandises">
+      <EntityTypeMapping TypeName="CarSalesApp1.Merchandise">
+        <MappingFragment StoreEntitySet="Merchandise">
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="make" ColumnName="make" />
+          <ScalarProperty Name="style" ColumnName="style" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="engine" ColumnName="engine" />
+          <ScalarProperty Name="imageURL" ColumnName="imageURL" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CarSalesApp1.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
