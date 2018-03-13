@@ -49,3 +49,4 @@ C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.AI.Web.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.csproj.CoreCompileInputs.cache
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.pdb
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.csprojResolveAssemblyReference.cache
