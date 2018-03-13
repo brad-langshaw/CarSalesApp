@@ -97,7 +97,7 @@ namespace CarSalesApp1.Controllers
                 if (file.ContentLength > 0)
                 {
                     var fileName = Path.GetFileName(file.FileName);
-                    var path = Path.Combine(Server.MapPath("~/Images"), fileName);
+                    var path = Path.Combine(Server.MapPath("~/Home/Images"), fileName);
                     file.SaveAs(path);
                  
                    
