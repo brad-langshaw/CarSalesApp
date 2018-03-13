@@ -89,46 +89,49 @@ namespace CarSalesApp1.Controllers
         
             return View();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        // <param name="file"></param>
+        //<param name="merchandise"></param>
+        // <returns></returns>
         [HttpPost]
-        public ActionResult Merchandise(HttpPostedFileBase file)
+        public ActionResult Merchandise([Bind(Include = "make,style,price,engine,file.FileName,description")] Merchandise merchandise, HttpPostedFileBase file)
         {
-            try
+             
+
+            if (ModelState.IsValid)
             {
-                if (file.ContentLength > 0)
-                {
-                    var fileName = Path.GetFileName(file.FileName);
-                    var path = Path.Combine(Server.MapPath("~/Home/images"), fileName);
-                    file.SaveAs(path);
-                 
-                   
-                        string make, style, engine, imageURL, description;
-                        double price = 0;
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/Home/images"), fileName);
+                file.SaveAs(path);
 
 
+                //string make, style, engine, imageURL, description;
+                //  double price = 0;
 
-                        imageURL = fileName;
-                        make = Request.Form["make"];
-                        style = Request.Form["style"];
-                        description = Request.Form["description"];
-                        price = Double.Parse(Request.Form["price"]); // Convert.ToDouble()
-                        engine = Request.Form["engine"];
-                        Merchandise merchandise = new Merchandise(1005, make, style, price,
-                engine, imageURL, description);
-                        using (var db = new StoreDBEntities())
-                        {
-                            db.Merchandises.Add(merchandise);
-                            db.SaveChanges();
-                        }
-                    
-                }
+
+                string imageURL;
+                imageURL = fileName;
+                //        make = Request.Form["make"];
+                //        style = Request.Form["style"];
+                //        description = Request.Form["description"];
+                //        price = Double.Parse(Request.Form["price"]); // Convert.ToDouble()
+                //        engine = Request.Form["engine"];
+                //   Merchandise merchandise = new Merchandise(1005, make, style, price,
+                //engine, imageURL, description);
+                var db = new StoreDBEntities();
+                
+                    db.Merchandises.Add(merchandise);
+                    db.SaveChanges();
+               
+
+
                 ViewBag.Message = "Upload successful";
                 return RedirectToAction("Index");
+
             }
-            catch
-            {
-                ViewBag.Message = "Upload failed";
-                return RedirectToAction("");
+            return View();
+        }
             }
         }
-    }
-}

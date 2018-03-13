@@ -68,12 +68,16 @@
         </form>
 
         <div class="container">
+            @{ 
+                var ImgFolder = "";
+                ImgFolder = @"Images";
+            }
 
             @foreach (var merchandise in merchandiseList)
             {<div class="row"><h2>@merchandise.make</h2></div>
             <div class="row">
                 <div class="col-4">
-                    <img width="350" src="/Images/@merchandise.imageURL" />
+                    <img width="350" src="@ImgFolder/@merchandise.imageURL" />
                 </div>
                 <div class="col-8">
                     <h3>@merchandise.style</h3>

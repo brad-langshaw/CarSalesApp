@@ -19,7 +19,9 @@ namespace CarSalesApp1
     public partial class Merchandise
     {
         public int productid { get; set; }
+        [Required(ErrorMessage = "Username is required")]
 
+        [StringLength(50, MinimumLength = 4)]
         public string make { get; set; }
 
         public string style { get; set; }
