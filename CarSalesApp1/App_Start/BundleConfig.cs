@@ -9,7 +9,7 @@ namespace CarSalesApp1
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" ));
+                        "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
