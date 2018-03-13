@@ -187,11 +187,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\images\1b62d9c373df548186ca437f3a94d547.jpg" />
-    <Content Include="App_Data\images\honda-civic.png" />
-    <Content Include="App_Data\images\MS_Transparent_Background.png" />
-    <Content Include="App_Data\images\profile.png" />
-    <Content Include="App_Data\images\Youxia.png" />
+    <Content Include="images\1b62d9c373df548186ca437f3a94d547.jpg" />
+    <Content Include="images\honda-civic.png" />
+    <Content Include="images\MS_Transparent_Background.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\Youxia.png" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -275,6 +275,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
