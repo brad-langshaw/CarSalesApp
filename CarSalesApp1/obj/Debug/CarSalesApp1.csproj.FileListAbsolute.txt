@@ -14,6 +14,8 @@ C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.AI.WindowsSe
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.ApplicationInsights.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.dll
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.WebActivator.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Newtonsoft.Json.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Helpers.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Mvc.dll
@@ -22,10 +24,14 @@ C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Razor.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.WebPages.Deployment.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.WebPages.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.WebPages.Razor.dll
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\WebActivatorEx.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\WebGrease.dll
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.Web.Administration.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\EntityFramework.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\EntityFramework.SqlServer.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.xml
+C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.WebActivator.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Helpers.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Mvc.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\System.Web.Optimization.xml
@@ -43,10 +49,3 @@ C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.AI.Web.xml
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.csproj.CoreCompileInputs.cache
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.dll
 C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.pdb
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\obj\Debug\CarSalesApp1.csprojResolveAssemblyReference.cache
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.dll
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.WebActivator.dll
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\WebActivatorEx.dll
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\Microsoft.Web.Administration.dll
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.xml
-C:\Users\bradl\source\repos\CarSalesApp1\CarSalesApp1\bin\MvcSiteMapProvider.WebActivator.xml
